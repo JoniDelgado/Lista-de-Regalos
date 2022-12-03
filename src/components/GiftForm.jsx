@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import GiftListContext from "../context/GiftListContext";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import { GiPerspectiveDiceSixFacesRandom } from "react-icons/Gi";
+import Icons from "../assets/Icons";
 import randomGift from "../assets/randomGifts";
+import GiftListContext from "../context/GiftListContext";
 
 const portalPath = document.getElementById("form");
 
@@ -61,7 +61,7 @@ const GiftForm = ({ setIsOpenForm, keyCounter }) => {
           />
           {!isEditing && (
             <Button type="button" onClick={handleRandomGift}>
-              {<GiPerspectiveDiceSixFacesRandom />}
+              <Icons className="icono" icon="auto" />
             </Button>
           )}
         </div>

@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import Icons from "../assets/Icons";
 import GiftListContext from "../context/GiftListContext";
-import { RiDeleteBin2Fill, RiEdit2Fill, RiPrinterLine } from "react-icons/Ri";
-import { CgDuplicate } from "react-icons/Cg";
 
 const ListItem = ({ setIsOpenForm }) => {
   const { giftList, setGiftList, setGiftForm, setIsEditing } =
@@ -45,13 +44,13 @@ const ListItem = ({ setIsOpenForm }) => {
             </GiftData>
             <div>
               <Button type="button" onClick={() => handleDeleteItem(id)}>
-                {<RiDeleteBin2Fill />}
+                <Icons className="icono" icon="delete" />
               </Button>
               <Button type="button" onClick={() => handleEditItem(id)}>
-                {<RiEdit2Fill />}
+                <Icons className="icono" icon="edit" />
               </Button>
               <Button type="button" onClick={() => handleDuplicateItem(id)}>
-                {<CgDuplicate />}
+                <Icons className="icono" icon="copy" />
               </Button>
             </div>
           </Item>
