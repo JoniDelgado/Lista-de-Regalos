@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import Icons from "../assets/Icons";
 import GiftListContext from "../context/GiftListContext";
-import { RiCloseCircleFill } from "react-icons/Ri";
 
 const portalPath = document.getElementById("form");
 
@@ -12,7 +12,7 @@ const ModalList = ({ setIsOpenModal }) => {
     <ModalListContainer>
       <ModalCard>
         <ExitButton onClick={() => setIsOpenModal(false)}>
-          {<RiCloseCircleFill />}
+          <Icons className="icono" icon="close" />
         </ExitButton>
         <h1>Regalos a comprar</h1>
         {giftList.map(({ id, gift, name, image, quantity }) => {
@@ -85,4 +85,9 @@ const ExitButton = styled.button`
   right: 30px;
   background-color: transparent;
   cursor: pointer;
+
+  .icono {
+    width: 0.7rem;
+    fill: black;
+  }
 `;
