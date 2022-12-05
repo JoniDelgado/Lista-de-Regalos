@@ -35,6 +35,7 @@ export default GiftList;
 const ListContainer = styled.div`
   padding: 1rem;
   width: 45%;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,12 +45,25 @@ const ListContainer = styled.div`
   align-items: center;
   border-radius: 5px;
   background-color: #fff;
+  transition: all linear 0.5s;
+
+  @media screen and (max-width: 950px) {
+    position: static;
+    width: 70%;
+  }
+
+  @media screen and (max-width: 600px) {
+    position: static;
+    width: 90%;
+  }
 `;
 
 const List = styled.ul`
+  height: 200px;
   margin: 1rem 0;
   width: 80%;
   list-style: none;
+  overflow-y: scroll;
 `;
 
 const Button = styled.button`
@@ -59,6 +73,10 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  @media screen and (max-width: 650px) {
+    width: 35%;
+  }
 `;
 
 const ShowPrice = styled.div`

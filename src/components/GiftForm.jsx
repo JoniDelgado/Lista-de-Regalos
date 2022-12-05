@@ -164,6 +164,13 @@ const Form = styled.form`
     border-radius: 5px;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 850px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 450px) {
+    width: 90%;
+  }
 `;
 
 const Button = styled.button`
@@ -176,5 +183,6 @@ const Button = styled.button`
   background-color: #ee1f1f;
   font-size: 1.8rem;
   color: white;
+  overflow: hidden;
   cursor: pointer;
 `;

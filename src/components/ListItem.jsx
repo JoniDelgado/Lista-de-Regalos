@@ -31,7 +31,7 @@ const ListItem = ({ setIsOpenForm }) => {
         return (
           <Item key={id}>
             <GiftData>
-              <img src={image} alt={gift} style={{ width: "50px" }} />
+              <img src={image} alt={gift} />
               <div>
                 <h4>
                   {gift} - ({quantity}).
@@ -67,6 +67,18 @@ const Item = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 470px) {
+    & > div:last-of-type {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .icono {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 const GiftData = styled.div`
@@ -74,6 +86,7 @@ const GiftData = styled.div`
   align-items: center;
 
   img {
+    width: 50px;
     margin-right: 0.5rem;
   }
 `;
@@ -89,4 +102,9 @@ const Button = styled.button`
   background-color: #ee1f1f;
   color: white;
   cursor: pointer;
+
+  @media screen and (max-width: 470px) {
+    height: 20px;
+    width: 20px;
+  }
 `;

@@ -52,11 +52,13 @@ const ModalListContainer = styled.div`
 const ModalCard = styled.div`
   padding: 2rem;
   width: 30%;
+  max-height: 90vh;
   position: relative;
   background-color: #fffdfd;
   border-radius: 40px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  overflow-y: scroll;
 
   h1 {
     margin-bottom: 1.5rem;
@@ -68,6 +70,14 @@ const ModalCard = styled.div`
     height: 50px;
     object-fit: fill;
     margin-right: 0.5rem;
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 70%;
   }
 `;
 
